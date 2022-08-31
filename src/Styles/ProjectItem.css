@@ -17,11 +17,13 @@
 }
 
 .project-item:hover {
+  font-weight: bold;
   background-color: #929292;
 }
 
 .selected {
   background-color: #929292;
+  font-weight: bold;
 }
 
 .project-description {
