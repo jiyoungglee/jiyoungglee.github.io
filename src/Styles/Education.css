@@ -1,0 +1,27 @@
+.grad-icon {
+  font-size: 30px;
+}
+
+.degree {
+  display:flex;
+  align-items: center;
+}
+
+.degree-details {
+  margin-left: 20px;
+}
+
+.degree-name {
+  font-weight: bold;
+}
+
+.education button {
+  display: block;
+  margin: 15px auto;
+  padding: 2px 10px;
+  color: white;
+  font-weight: bold;
+  background-color: transparent;
+  border: solid 1px #bdbdbd;
+  border-radius: 1em;
+}

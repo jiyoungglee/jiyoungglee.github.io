@@ -1,0 +1,48 @@
+.about {
+  margin: 0 20px;
+}
+
+.about-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+}
+
+.about-block h2 {
+  margin-left: 10px;
+}
+
+.icon-strip {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px 20px;
+  width: 100%;
+}
+
+.icon-strip a {
+  padding: 0px 15px;
+}
+
+.icon {
+  font-size: 32px;
+}
+
+.icon-strip a:link, a:visited {
+  color: black;
+}
+
+.github {
+  fill: white;
+  height: 32px;
+  width: 32px;
+}
