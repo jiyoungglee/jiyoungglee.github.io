@@ -3,7 +3,7 @@ import About from './Components/About';
 import ProjectList from './Components/ProjectList';
 import Education from './Components/Education';
 import Skills from './Components/Skills';
-import PreviewPage from './Components/PreviewPage';
+import PreviewMode from './Components/PreviewMode';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Education />
         <Skills />
       </div>
-      <PreviewPage />
+      <PreviewMode />
     </div>
   );
 }
