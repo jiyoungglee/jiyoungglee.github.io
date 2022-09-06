@@ -5,7 +5,7 @@ function PreviewPopup() {
   return (
     <div className="preview-popup">
       <div className="preview-left">
-        <video width="500" autoPlay loop muted>
+        <video autoPlay loop muted>
           <source src={require("../Previews/portfolio-demo.mov")} type="video/mp4" />
         </video>
       </div>
