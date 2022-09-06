@@ -1,12 +1,9 @@
 import { faBackwardStep, faCaretDown, faCaretUp, faForwardStep, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import "../Styles/PreviewBar.css";
+import "../Styles/PreviewMode.css";
 import PreviewPopup from "./PreviewPopup";
 
-function PreviewMode() {
-  const [playerOpen, setPlayerOpen] = useState(false);
-
+function PreviewMode({ playerOpen, setPlayerOpen}) {
   return (
     <div>
       {playerOpen && <PreviewPopup />}
@@ -14,7 +11,7 @@ function PreviewMode() {
         <div className="preview-bar">
           <div className="player-controls">
             <FontAwesomeIcon icon={faBackwardStep} size="xl" />
-            <FontAwesomeIcon icon={faPlay} size="2x" className="play-button"/>
+            <FontAwesomeIcon icon={faPlay} size="2x" className="play-button" />
             <FontAwesomeIcon icon={faForwardStep} size="xl" />
           </div>
           <div className="project-controls">

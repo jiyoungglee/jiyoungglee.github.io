@@ -1,20 +1,33 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faAngleRight, faLink, faPlay } from "@fortawesome/free-solid-svg-icons";
 
 import '../Styles/ProjectItem.css';
-import { useState } from "react";
 
+function ProjectItem({ index, link, name, description, descOpen, setDescOpen, setPlayerOpen }) {
+  function select() {
+    if (descOpen === index) {
+      setDescOpen(null)
+    } else {
+      setDescOpen(index)
+    }
+  }
 
-function ProjectItem({ index, link, name, description }) {
-  const [descOpen, setDescOpen] = useState(false);
   return (
     <div className="project">
-      <div className={`project-item ${descOpen && "selected"}`} onClick={() => setDescOpen(!descOpen)}>
+      <div className={`project-item${descOpen===index ? " selected" : ""}`} onClick={select}>
         <span className="project-number">{index}</span>
-        <FontAwesomeIcon className="link-icon" icon={faLink} />
+        <div className="project-icon" onClick={() => setPlayerOpen(true)}>
+          <FontAwesomeIcon icon={faPlay} />
+        </div>
+        <div className="project-icon">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLink} />
+          </a>
+        </div>
         <span className="project-name">{name}</span>
+        {descOpen===index ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
       </div>
-      {descOpen 
+      {descOpen===index 
         && 
         <div className="project-description">
           {description}

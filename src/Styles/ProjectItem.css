@@ -2,18 +2,25 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
-.link-icon {
-  margin-right: 10px;
+.project-icon {
+  flex-basis: 20px;
+}
+
+.project-icon a {
+  color: white;
 }
 
 .project-number {
-  margin-right: 20px;
+  flex-basis: 50px;
 }
 
 .project-name {
   margin-left: 10px;
+  flex-grow: 4;
 }
 
 .project-item:hover {
