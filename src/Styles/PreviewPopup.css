@@ -32,4 +32,8 @@
   .preview-popup {
     flex-direction: row;
   }
+  .preview-left {
+    height: 100%;
+    flex-basis: 50%;
+  }
 }
