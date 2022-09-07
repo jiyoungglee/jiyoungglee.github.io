@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/jiyoung-portfolio/static/css/main.fb41e5ad.css",
+    "main.js": "/jiyoung-portfolio/static/js/main.2764fd0f.js",
+    "static/media/portfolio-demo.mov": "/jiyoung-portfolio/static/media/portfolio-demo.debb5676a695c2b74103.mov",
+    "static/media/portfolio-preview.png": "/jiyoung-portfolio/static/media/portfolio-preview.086fb8273a2c34a801d8.png",
+    "index.html": "/jiyoung-portfolio/index.html",
+    "main.fb41e5ad.css.map": "/jiyoung-portfolio/static/css/main.fb41e5ad.css.map",
+    "main.2764fd0f.js.map": "/jiyoung-portfolio/static/js/main.2764fd0f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb41e5ad.css",
+    "static/js/main.2764fd0f.js"
+  ]
+}
