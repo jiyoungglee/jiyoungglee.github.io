@@ -1,12 +1,23 @@
 import { faBackwardStep, faCaretDown, faCaretUp, faForwardStep, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import { Actions, PlayerContext } from "../store/PlayerContext";
 import "../Styles/PreviewMode.css";
 import PreviewPopup from "./PreviewPopup";
 
-function PreviewMode({ playerOpen, setPlayerOpen}) {
+function PreviewMode() {
+  const { state, dispatch } = useContext(PlayerContext);
+  
+  function togglePlayer() {
+    dispatch({
+      type: Actions.TOGGLE,
+      payload: !state.open
+    })
+  }
+
   return (
     <div>
-      {playerOpen && <PreviewPopup />}
+      {state.open && <PreviewPopup />}
       <div className="footer">
         <div className="preview-bar">
           <div className="player-controls">
@@ -15,15 +26,15 @@ function PreviewMode({ playerOpen, setPlayerOpen}) {
             <FontAwesomeIcon icon={faForwardStep} size="xl" />
           </div>
           <div className="project-controls">
-            <img alt="thumbnail" src={require("../Previews/portfolio-preview.png")} />
+            <img alt="thumbnail" src={state.preview} />
             <div className="project-info">
-              <span className="project-name">Portfolio Project</span>
+              <span className="project-name">{state.name}</span>
             </div>
           </div>
           <div className="right-controls">
-            {playerOpen
-              ? <FontAwesomeIcon icon={faCaretDown} size="xl" onClick={() => setPlayerOpen(false)}/>
-              : <FontAwesomeIcon icon={faCaretUp} size="xl" onClick={() => setPlayerOpen(true)}/>
+            {state.open
+              ? <FontAwesomeIcon icon={faCaretDown} size="xl" onClick={togglePlayer}/>
+              : <FontAwesomeIcon icon={faCaretUp} size="xl" onClick={togglePlayer}/>
             }
           </div>
         </div>
