@@ -1,26 +1,20 @@
-import { useContext, useEffect, useRef } from 'react';
-import { PlayerContext } from '../store/PlayerContext';
+import { PlayerContext } from "../store/PlayerContext";
+import Video from './Video';
 import '../Styles/PreviewPopup.css';
 import ProjectList from './ProjectList';
+import { useContext } from "react";
 
 function PreviewPopup() {
   const { state } = useContext(PlayerContext);
-  const videoRef = useRef();
-
-  useEffect(() => {    
-    videoRef.current?.load();
-  }, [state.demo]);
 
   return (
-    <div className="preview-popup">
+    <div className={ state.open ? "preview-popup" : "miniplayer" }>
       <div className="preview-left">
-        <video ref={videoRef} autoPlay loop muted>
-          <source src={state.demo} type="video/mp4" />
-        </video>
+        <Video />
       </div>
-      <div className="preview-right">
-        <ProjectList />
-      </div>
+      {state.open 
+        &&  <div className="preview-right"><ProjectList /></div>
+      }
     </div>
   )
 }

@@ -4,6 +4,8 @@ export const Actions = {
   UPDATE: 'UPDATE',
   RESET: 'RESET',
   TOGGLE: 'TOGGLE',
+  LOAD: 'LOAD',
+  PAUSE: 'PAUSE',
 }
 
 export const initialState = {          
@@ -12,6 +14,8 @@ export const initialState = {
   demo: '../Previews/portfolio-demo.mov',
   preview: require('../Previews/portfolio-preview.png'),
   open: false,
+  videoRef: null,
+  paused: true,
 }
 
 const reducer = (state, {type, payload}) => {
@@ -24,6 +28,17 @@ const reducer = (state, {type, payload}) => {
           demo: payload.demo,
           preview: payload.preview,
           open: payload.open,
+        }
+      case Actions.LOAD:
+        return {
+          ...state,
+          videoRef: payload.videoRef,
+          paused: false,
+        }
+      case Actions.PAUSE:
+        return {
+          ...state,
+          paused: payload.paused,
         }
       case Actions.TOGGLE:
         return {

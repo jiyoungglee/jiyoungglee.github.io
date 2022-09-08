@@ -1,9 +1,10 @@
-import { faBackwardStep, faCaretDown, faCaretUp, faForwardStep, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { Actions, PlayerContext } from "../store/PlayerContext";
-import "../Styles/PreviewMode.css";
+import PlayerControls from "./PlayerControls";
 import PreviewPopup from "./PreviewPopup";
+import "../Styles/PreviewMode.css";
 
 function PreviewMode() {
   const { state, dispatch } = useContext(PlayerContext);
@@ -17,14 +18,10 @@ function PreviewMode() {
 
   return (
     <div>
-      {state.open && <PreviewPopup />}
+      <PreviewPopup />
       <div className="footer">
         <div className="preview-bar">
-          <div className="player-controls">
-            <FontAwesomeIcon icon={faBackwardStep} size="xl" />
-            <FontAwesomeIcon icon={faPlay} size="2x" className="play-button" />
-            <FontAwesomeIcon icon={faForwardStep} size="xl" />
-          </div>
+          <PlayerControls />
           <div className="project-controls">
             <img alt="thumbnail" src={state.preview} />
             <div className="project-info">

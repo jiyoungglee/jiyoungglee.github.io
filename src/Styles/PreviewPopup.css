@@ -8,6 +8,13 @@
   background-color: black;
 }
 
+.miniplayer {
+  position: fixed;
+  bottom: 90px;
+  right: 0;
+  width: 300px;
+}
+
 .preview-left {
   height: 50%;
   display: flex;
