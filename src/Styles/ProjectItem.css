@@ -1,13 +1,18 @@
-.project-item {
-  padding: 10px;
-  cursor: pointer;
+.project {
+  display:flex;
+  flex-direction: column;
   border-radius: 5px;
+  padding: 10px;
+}
+
+.project-item {
   display: flex;
   align-items: center;
 }
 
 .project-icon {
   flex-basis: 20px;
+  cursor: pointer;
 }
 
 .project-icon a {
@@ -18,22 +23,28 @@
   flex-basis: 50px;
 }
 
-.project-name {
+.project-text {
+  display: flex;
   margin-left: 10px;
   flex-grow: 4;
+  cursor: pointer;
 }
 
-.project-item:hover {
-  font-weight: bold;
-  background-color: #929292;
+.project-name {
+  flex-basis: 50%;
+}
+
+.project:hover {
+  background-color: #616161;
 }
 
 .selected {
-  background-color: #929292;
+  background-color: #616161;
   font-weight: bold;
 }
 
 .project-description {
-  margin-left: 77px;
+  margin-left: 100px;
   margin-top: 10px;
+  font-weight: normal;
 }
