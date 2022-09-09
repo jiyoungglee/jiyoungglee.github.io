@@ -62,7 +62,7 @@ function ProjectItem({ index, link, name, description, demo, preview, descOpen, 
   return (
     <div className={`project${descOpen===index ? " selected" : ""}`}>
       <div className="project-item">
-        <span className="project-number">{index}</span>
+        <span className="project-number">{index + 1}</span>
         <div className="project-icon" onClick={()=>control(state.videoRef)}>
           {(state.index===index && !state.paused) ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
         </div>

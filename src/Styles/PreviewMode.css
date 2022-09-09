@@ -15,9 +15,20 @@
 .project-controls {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .project-controls img {
   height: 60px;
   object-fit: contain;
+}
+
+.right-controls {
+  display: flex;
+  flex-basis: 100px;
+  justify-content: flex-end;
+}
+
+.right-controls > * {
+  cursor: pointer;
 }

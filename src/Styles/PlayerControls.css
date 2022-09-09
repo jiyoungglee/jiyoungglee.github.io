@@ -1,12 +1,10 @@
 .player-controls {
   display: flex;
   align-items: center;
+  flex-basis: 100px;
+  justify-content: space-between;
 }
 
 .player-controls > * {
   cursor: pointer;
-}
-
-.play-button {
-  padding: 0 20px;
 }

@@ -11,7 +11,7 @@ function ProjectList({ setPlayerOpen }) {
       return (
         <ProjectItem 
           key={index} 
-          index={index+1} 
+          index={index} 
           link={link} 
           name={name} 
           description={description}
