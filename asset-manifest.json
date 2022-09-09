@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/jiyoung-portfolio/static/css/main.fb41e5ad.css",
-    "main.js": "/jiyoung-portfolio/static/js/main.2764fd0f.js",
+    "main.css": "/jiyoung-portfolio/static/css/main.d468f85d.css",
+    "main.js": "/jiyoung-portfolio/static/js/main.55600de6.js",
+    "static/media/social-feed_demo.mov": "/jiyoung-portfolio/static/media/social-feed_demo.f67b4c13c84bc456b11e.mov",
     "static/media/portfolio-demo.mov": "/jiyoung-portfolio/static/media/portfolio-demo.debb5676a695c2b74103.mov",
+    "static/media/social-feed_preview.png": "/jiyoung-portfolio/static/media/social-feed_preview.0e58ca8e3548928951e3.png",
     "static/media/portfolio-preview.png": "/jiyoung-portfolio/static/media/portfolio-preview.086fb8273a2c34a801d8.png",
     "index.html": "/jiyoung-portfolio/index.html",
-    "main.fb41e5ad.css.map": "/jiyoung-portfolio/static/css/main.fb41e5ad.css.map",
-    "main.2764fd0f.js.map": "/jiyoung-portfolio/static/js/main.2764fd0f.js.map"
+    "main.d468f85d.css.map": "/jiyoung-portfolio/static/css/main.d468f85d.css.map",
+    "main.55600de6.js.map": "/jiyoung-portfolio/static/js/main.55600de6.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb41e5ad.css",
-    "static/js/main.2764fd0f.js"
+    "static/css/main.d468f85d.css",
+    "static/js/main.55600de6.js"
   ]
 }
