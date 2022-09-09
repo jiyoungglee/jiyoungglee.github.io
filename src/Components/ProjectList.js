@@ -3,7 +3,7 @@ import "../Styles/ProjectList.css";
 import { useState } from "react";
 import { projects } from "../store/Projects";
 
-function ProjectList({ setPlayerOpen }) {
+function ProjectList() {
   const [descOpen, setDescOpen] = useState(null);
 
   function getProjects() {
@@ -18,8 +18,7 @@ function ProjectList({ setPlayerOpen }) {
           demo={demo}
           preview={preview}
           descOpen={descOpen}
-          setDescOpen={setDescOpen} 
-          setPlayerOpen={setPlayerOpen} />
+          setDescOpen={setDescOpen} />
       )
     })
   }

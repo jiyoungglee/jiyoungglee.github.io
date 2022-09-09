@@ -1,16 +1,31 @@
-import { PlayerContext } from "../store/PlayerContext";
+import { Actions, PlayerContext } from "../store/PlayerContext";
 import Video from './Video';
-import '../Styles/PreviewPopup.css';
 import ProjectList from './ProjectList';
 import { useContext } from "react";
 
+import '../Styles/PreviewPopup.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
+
+
 function PreviewPopup() {
-  const { state } = useContext(PlayerContext);
+  const { state, dispatch } = useContext(PlayerContext);
+
+  function exitPlayer() {
+    dispatch({
+      type: Actions.RESET,
+    })
+  }
 
   return (
     <div className={ state.open ? "preview-popup" : "miniplayer" }>
       <div className="preview-left">
         <Video />
+        { !state.open 
+          && <div className="exit-preview">
+            <FontAwesomeIcon icon={faX} className="exit-button" size="lg" onClick={exitPlayer} />
+          </div>
+        }
       </div>
       {state.open 
         &&  <div className="preview-right"><ProjectList /></div>

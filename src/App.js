@@ -4,20 +4,21 @@ import ProjectList from './Components/ProjectList';
 import Education from './Components/Education';
 import Skills from './Components/Skills';
 import PreviewMode from './Components/PreviewMode';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { PlayerContext } from './store/PlayerContext';
 
 function App() {
-  const [playerOpen, setPlayerOpen] = useState(false);
-
+  const { state } = useContext(PlayerContext);
+  
   return (
     <div>
       <About />
       <div className="content">
-        <ProjectList setPlayerOpen={setPlayerOpen} />
+        <ProjectList />
         <Education />
         <Skills />
       </div>
-      <PreviewMode playerOpen={playerOpen} setPlayerOpen={setPlayerOpen} />
+      { state.index > -1 && <PreviewMode /> }
     </div>
   );
 }

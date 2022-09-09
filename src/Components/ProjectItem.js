@@ -24,6 +24,7 @@ function ProjectItem({ index, link, name, description, demo, preview, descOpen, 
         demo, 
         preview, 
         open: true,
+        paused: false,
       }
     })
   }

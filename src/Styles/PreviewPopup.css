@@ -28,9 +28,30 @@
   margin: 0 20px;
 }
 
-.preview-left video{
+.preview-left video {
   height: 100%;
   width: 100%;
+}
+
+.exit-preview {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+
+.exit-preview .exit-button {
+  margin: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.exit-preview:hover {
+  background-color: #8d8b8b69;
+}
+
+.exit-preview:hover .exit-button{
+  visibility: visible;
 }
 
 @media only screen and (min-width: 1024px) {

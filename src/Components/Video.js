@@ -19,7 +19,6 @@ function Video() {
   }, [dispatch, state.demo]);
 
   return (
-    
     <video ref={videoRef} autoPlay loop muted>
       <source src={state.demo} type="video/mp4" />
     </video>

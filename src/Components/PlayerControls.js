@@ -41,6 +41,7 @@ function PlayerControls() {
           demo: nextProject.demo,
           preview: nextProject.preview,
           open: state.open,
+          paused: false,
         }
       })
     }
@@ -58,6 +59,7 @@ function PlayerControls() {
           demo: previousProject.demo,
           preview: previousProject.preview,
           open: state.open,
+          paused: false,
         }
       })
     }
