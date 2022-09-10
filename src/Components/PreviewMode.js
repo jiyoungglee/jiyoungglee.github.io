@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Actions, PlayerContext } from "../store/PlayerContext";
 import PlayerControls from "./PlayerControls";
 import PreviewPopup from "./PreviewPopup";
+
 import "../Styles/PreviewMode.css";
 
 function PreviewMode() {
@@ -29,10 +30,12 @@ function PreviewMode() {
             </div>
           </div>
           <div className="right-controls">
-            {state.open
-              ? <FontAwesomeIcon icon={faCaretDown} size="xl" onClick={togglePlayer}/>
-              : <FontAwesomeIcon icon={faCaretUp} size="xl" onClick={togglePlayer}/>
-            }
+            <button>
+              {state.open
+                ? <FontAwesomeIcon icon={faCaretDown} size="xl" onClick={togglePlayer}/>
+                : <FontAwesomeIcon icon={faCaretUp} size="xl" onClick={togglePlayer}/>
+              }
+            </button>
           </div>
         </div>
       </div>

@@ -29,6 +29,10 @@
   justify-content: flex-end;
 }
 
-.right-controls > * {
+.right-controls button {
   cursor: pointer;
+  background: none;
+  border: none;
+  font-size: inherit;
+  color: white;
 }

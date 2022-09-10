@@ -43,6 +43,10 @@
 .exit-preview .exit-button {
   margin: 10px;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-size: inherit;
+  color: white;
   visibility: hidden;
 }
 

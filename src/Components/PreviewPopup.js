@@ -22,8 +22,11 @@ function PreviewPopup() {
       <div className="preview-left">
         <Video />
         { !state.open 
-          && <div className="exit-preview">
-            <FontAwesomeIcon icon={faX} className="exit-button" size="lg" onClick={exitPlayer} />
+          && 
+          <div className="exit-preview">
+            <button className="exit-button" onClick={exitPlayer}>
+              <FontAwesomeIcon icon={faX} size="lg" />
+            </button>
           </div>
         }
       </div>

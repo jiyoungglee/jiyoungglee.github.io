@@ -18,7 +18,7 @@ function App() {
         <Education />
         <Skills />
       </div>
-      { state.index > -1 && <PreviewMode /> }
+      { state.index !== null && <PreviewMode /> }
     </div>
   );
 }

@@ -9,10 +9,10 @@ export const Actions = {
 }
 
 export const initialState = {          
-  index: -1,
-  name: 'No Project Selected',
-  demo: '../Previews/portfolio-demo.mov',
-  preview: require('../Previews/portfolio-preview.png'),
+  index: null,
+  name: null,
+  demo: null,
+  preview: null,
   open: false,
   videoRef: null,
   paused: true,
@@ -46,7 +46,7 @@ const reducer = (state, {type, payload}) => {
           open: payload
         }
       case Actions.RESET:
-        return {initialState};
+        return initialState;
       default: return state;
     }
 }

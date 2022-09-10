@@ -10,21 +10,15 @@ function PlayerControls() {
   const { state, dispatch } = useContext(PlayerContext);
 
   function play() {
-    state.videoRef.play();
+    if (state.paused) {
+      state.videoRef.play();
+    } else if (!state.paused) {
+      state.videoRef.pause();
+    }
     dispatch({
       type: Actions.PAUSE,
       payload: {
-        paused: false
-      }
-    })
-  }
-  
-  function pause() {
-    state.videoRef.pause();
-    dispatch({
-      type: Actions.PAUSE,
-      payload: {
-        paused: true
+        paused: !state.paused,
       }
     })
   }
@@ -67,12 +61,18 @@ function PlayerControls() {
 
   return (
     <div className="player-controls">
-      <FontAwesomeIcon icon={faBackwardStep} size="xl" onClick={previous} />
-      { state.paused
-        ? <FontAwesomeIcon icon={faPlay} size="2x" className="play-button" onClick={play} />
-        : <FontAwesomeIcon icon={faPause} size="2x" className="play-button" onClick={pause} /> 
-      }
-      <FontAwesomeIcon icon={faForwardStep} size="xl" onClick={next} />
+      <button onClick={previous}>
+        <FontAwesomeIcon icon={faBackwardStep} size="lg" />
+      </button>
+      <button onClick={play}>
+        { state.paused
+          ? <FontAwesomeIcon icon={faPlay} size="2x" />
+          : <FontAwesomeIcon icon={faPause} size="2x" /> 
+        }
+      </button>
+      <button onClick={next}>
+        <FontAwesomeIcon icon={faForwardStep} size="lg" />
+      </button>
     </div>
   )
 }

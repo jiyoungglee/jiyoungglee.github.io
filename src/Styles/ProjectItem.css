@@ -10,12 +10,16 @@
   align-items: center;
 }
 
-.project-icon {
+.project-item button {
   flex-basis: 20px;
   cursor: pointer;
+  background:none;
+  border: none;
+  color: white;
+  font-size: inherit;
 }
 
-.project-icon a {
+.project-item a {
   color: white;
 }
 
@@ -23,15 +27,10 @@
   flex-basis: 50px;
 }
 
-.project-text {
-  display: flex;
+.project-name {
   margin-left: 10px;
   flex-grow: 4;
   cursor: pointer;
-}
-
-.project-name {
-  flex-basis: 50%;
 }
 
 .project:hover {
