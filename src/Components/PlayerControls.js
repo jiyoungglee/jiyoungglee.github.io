@@ -33,7 +33,6 @@ function PlayerControls() {
           index: state.index + 1,
           name: nextProject.name,
           demo: nextProject.demo,
-          preview: nextProject.preview,
           open: state.open,
           paused: false,
         }
@@ -51,7 +50,6 @@ function PlayerControls() {
           index: state.index - 1,
           name: previousProject.name,
           demo: previousProject.demo,
-          preview: previousProject.preview,
           open: state.open,
           paused: false,
         }

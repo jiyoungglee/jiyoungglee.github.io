@@ -4,7 +4,7 @@ import '../Styles/ProjectItem.css';
 import { useContext } from "react";
 import { Actions, PlayerContext } from "../store/PlayerContext";
 
-function ProjectItem({ index, link, name, description, demo, preview, descOpen, setDescOpen }) {
+function ProjectItem({ index, link, name, description, demo, descOpen, setDescOpen }) {
   const { state, dispatch } = useContext(PlayerContext);
 
   function seeDescription() {
@@ -22,7 +22,6 @@ function ProjectItem({ index, link, name, description, demo, preview, descOpen, 
         index,
         name,
         demo, 
-        preview, 
         open: true,
         paused: false,
       }

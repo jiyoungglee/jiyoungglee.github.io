@@ -1,9 +1,9 @@
-.preview-popup {
+.popup {
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
-  height: calc(100% - 80px);
+  height: calc(100% - 54px);
   width: 100vw;
   background-color: black;
 }
@@ -25,7 +25,9 @@
 
 .preview-right {
   display: flex;
-  margin: 0 20px;
+  padding: 0 20px;
+  overflow-y: scroll;
+  height: 50%;
 }
 
 .preview-left video {
@@ -59,7 +61,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .preview-popup {
+  .popup {
     flex-direction: row;
   }
   .preview-left {

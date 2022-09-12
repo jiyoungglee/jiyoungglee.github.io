@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   background-color: #929292;
-  width: 100%;
+  width: 100vw;
 }
 
 .preview-bar {
@@ -12,20 +12,22 @@
   margin: 10px 20px;
 }
 
+.left-controls {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
 .project-controls {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.project-controls img {
-  height: 60px;
-  object-fit: contain;
+  justify-self: center;
 }
 
 .right-controls {
   display: flex;
-  flex-basis: 100px;
+  flex: 1;
   justify-content: flex-end;
 }
 

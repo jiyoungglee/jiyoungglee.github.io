@@ -22,12 +22,11 @@ function PreviewMode() {
       <PreviewPopup />
       <div className="footer">
         <div className="preview-bar">
-          <PlayerControls />
+          <div className="left-controls">
+            <PlayerControls />
+          </div>
           <div className="project-controls">
-            <img alt="thumbnail" src={state.preview} />
-            <div className="project-info">
-              <span className="project-name">{state.name}</span>
-            </div>
+            <span>{state.name}</span>
           </div>
           <div className="right-controls">
             <button>

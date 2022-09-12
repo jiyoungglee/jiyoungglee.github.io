@@ -12,7 +12,6 @@ export const initialState = {
   index: null,
   name: null,
   demo: null,
-  preview: null,
   open: false,
   videoRef: null,
   paused: true,
@@ -26,7 +25,6 @@ const reducer = (state, {type, payload}) => {
           index: payload.index,
           name: payload.name,
           demo: payload.demo,
-          preview: payload.preview,
           open: payload.open,
           paused: payload.paused,
         }

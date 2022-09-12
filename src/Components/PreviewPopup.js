@@ -1,7 +1,7 @@
 import { Actions, PlayerContext } from "../store/PlayerContext";
 import Video from './Video';
 import ProjectList from './ProjectList';
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 import '../Styles/PreviewPopup.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +18,7 @@ function PreviewPopup() {
   }
 
   return (
-    <div className={ state.open ? "preview-popup" : "miniplayer" }>
+    <div className={ state.open ? "popup" : "miniplayer" }>
       <div className="preview-left">
         <Video />
         { !state.open 

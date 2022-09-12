@@ -7,7 +7,7 @@ function ProjectList() {
   const [descOpen, setDescOpen] = useState(null);
 
   function getProjects() {
-    return projects.map(({ link, name, description, demo, preview }, index) => {
+    return projects.map(({ link, name, description, demo }, index) => {
       return (
         <ProjectItem 
           key={index} 
@@ -16,7 +16,6 @@ function ProjectList() {
           name={name} 
           description={description}
           demo={demo}
-          preview={preview}
           descOpen={descOpen}
           setDescOpen={setDescOpen} />
       )
