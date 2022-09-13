@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/jiyoung-portfolio/static/css/main.d468f85d.css",
-    "main.js": "/jiyoung-portfolio/static/js/main.55600de6.js",
-    "static/media/social-feed_demo.mov": "/jiyoung-portfolio/static/media/social-feed_demo.f67b4c13c84bc456b11e.mov",
+    "main.css": "/jiyoung-portfolio/static/css/main.08e3887f.css",
+    "main.js": "/jiyoung-portfolio/static/js/main.58eddf9d.js",
+    "static/media/social-feed-demo.mov": "/jiyoung-portfolio/static/media/social-feed-demo.f67b4c13c84bc456b11e.mov",
+    "static/media/mall-trip-demo.mov": "/jiyoung-portfolio/static/media/mall-trip-demo.dde58e5ccc5fe338a47a.mov",
     "static/media/portfolio-demo.mov": "/jiyoung-portfolio/static/media/portfolio-demo.debb5676a695c2b74103.mov",
-    "static/media/social-feed_preview.png": "/jiyoung-portfolio/static/media/social-feed_preview.0e58ca8e3548928951e3.png",
-    "static/media/portfolio-preview.png": "/jiyoung-portfolio/static/media/portfolio-preview.086fb8273a2c34a801d8.png",
     "index.html": "/jiyoung-portfolio/index.html",
-    "main.d468f85d.css.map": "/jiyoung-portfolio/static/css/main.d468f85d.css.map",
-    "main.55600de6.js.map": "/jiyoung-portfolio/static/js/main.55600de6.js.map"
+    "main.08e3887f.css.map": "/jiyoung-portfolio/static/css/main.08e3887f.css.map",
+    "main.58eddf9d.js.map": "/jiyoung-portfolio/static/js/main.58eddf9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d468f85d.css",
-    "static/js/main.55600de6.js"
+    "static/css/main.08e3887f.css",
+    "static/js/main.58eddf9d.js"
   ]
 }
