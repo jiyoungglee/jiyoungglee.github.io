@@ -1,8 +1,8 @@
 .project {
   display:flex;
   flex-direction: column;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 10px 0;
+  border-bottom: solid 1px #ffffff1a;
 }
 
 .project-item {
@@ -11,16 +11,29 @@
 }
 
 .project-item button {
-  flex-basis: 20px;
   cursor: pointer;
   background:none;
   border: none;
-  color: white;
-  font-size: inherit;
+  width: 32px;
+  height: 32px;
+}
+
+.project-play-button {
+  padding: 4px;
+}
+
+.project-item svg {
+  fill: white;
+  width: 100%;
+  height: 100%;
 }
 
 .project-item a {
   color: white;
+}
+
+.project-link-button {
+  padding: 7px;
 }
 
 .project-number {
@@ -34,11 +47,11 @@
 }
 
 .project:hover {
-  background-color: #616161;
+  background-color: #ffffff1a;
 }
 
 .selected {
-  background-color: #616161;
+  background-color: #ffffff1a;
   font-weight: bold;
 }
 
@@ -46,4 +59,15 @@
   margin-left: 100px;
   margin-top: 10px;
   font-weight: normal;
+}
+
+.desc{
+  transition-duration: 100ms;
+  transition-property: transform;
+  transition-timing-function: linear;
+  padding: 4px;
+}
+
+.desc.closed{
+  transform: rotate(90deg);
 }

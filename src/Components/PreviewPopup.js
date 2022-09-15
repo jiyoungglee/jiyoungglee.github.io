@@ -1,15 +1,29 @@
 import { Actions, PlayerContext } from "../store/PlayerContext";
-import Video from './Video';
 import ProjectList from './ProjectList';
-import { useContext, useEffect } from "react";
+import ProjectDescription from './ProjectDescription';
+import { useContext, useState } from "react";
 
-import '../Styles/PreviewPopup.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 
+import '../Styles/PreviewPopup.css';
 
-function PreviewPopup() {
+
+
+function PreviewPopup({ children }) {
+  const tabs = [
+    {
+      name: 'PROJECTS',
+      id: 'projects',
+    },
+    {
+      name: 'DESCRIPTION',
+      id: 'description',
+    },
+  ]
+
   const { state, dispatch } = useContext(PlayerContext);
+  const [tabSelected, setTabSelected] = useState('description');
 
   function exitPlayer() {
     dispatch({
@@ -18,9 +32,9 @@ function PreviewPopup() {
   }
 
   return (
-    <div className={ state.open ? "popup" : "miniplayer" }>
-      <div className="preview-left">
-        <Video />
+    <div className={ state.open ? "popup" : "popup minimized" }>
+      <div className={`video-container ${ state.open ? "preview-left" : "miniplayer"}`}>
+        {children}
         { !state.open 
           && 
           <div className="exit-preview">
@@ -30,8 +44,21 @@ function PreviewPopup() {
           </div>
         }
       </div>
-      {state.open 
-        &&  <div className="preview-right"><ProjectList /></div>
+      { state.open 
+        &&
+        <div className="preview-right">
+          <div className="preview-tabs">
+            {tabs.map((tab) => (
+            <div key={tab.id} className={`tab ${tab.id===tabSelected ? 'open' : ''}`} onClick={() => setTabSelected(tab.id)}>{tab.name}</div>
+            ))}
+          </div>
+          <div className="tab-content">
+            { tabSelected === 'projects'
+              ? <ProjectList />
+              : <ProjectDescription />
+            }
+          </div>
+        </div>
       }
     </div>
   )

@@ -1,10 +1,11 @@
 import ProjectItem from "./ProjectItem";
 import "../Styles/ProjectList.css";
-import { useState } from "react";
+import { useContext } from "react";
 import { projects } from "../store/Projects";
+import { PlayerContext } from "../store/PlayerContext";
 
 function ProjectList() {
-  const [descOpen, setDescOpen] = useState(null);
+  const { state } = useContext(PlayerContext);
 
   function getProjects() {
     return projects.map(({ link, name, description, demo }, index) => {
@@ -15,16 +16,14 @@ function ProjectList() {
           link={link} 
           name={name} 
           description={description}
-          demo={demo}
-          descOpen={descOpen}
-          setDescOpen={setDescOpen} />
+          demo={demo} />
       )
     })
   }
 
   return (
     <div className="projects">
-      <h2>Projects</h2>
+      {!state.open && <h2>Projects</h2>}
       <div className="project-list">
         {getProjects()}
       </div>

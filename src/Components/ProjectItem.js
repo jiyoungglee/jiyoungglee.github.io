@@ -1,19 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretLeft, faLink, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
 import '../Styles/ProjectItem.css';
 import { useContext } from "react";
 import { Actions, PlayerContext } from "../store/PlayerContext";
 
-function ProjectItem({ index, link, name, description, demo, descOpen, setDescOpen }) {
+function ProjectItem({ index, link, name, description, demo }) {
   const { state, dispatch } = useContext(PlayerContext);
 
-  function seeDescription() {
-    if (descOpen === index) {
-      setDescOpen(null)
-    } else {
-      setDescOpen(index)
-    }
-  }
+  const playIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M8 5v14l11-7z"></path></svg>
+  const pauseIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+  const linkIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
 
   function start() {
     dispatch({
@@ -21,7 +15,8 @@ function ProjectItem({ index, link, name, description, demo, descOpen, setDescOp
       payload: {
         index,
         name,
-        demo, 
+        demo,
+        description,
         open: true,
         paused: false,
       }
@@ -62,28 +57,19 @@ function ProjectItem({ index, link, name, description, demo, descOpen, setDescOp
   }
 
   return (
-    <div className={`project${descOpen===index ? " selected" : ""}`}>
+    <div className={`project${state.index===index ? " selected" : ""}`}>
       <div className="project-item">
         <span className="project-number">{index + 1}</span>
-        <button onClick={()=>control(state.videoRef)}>
-          {(state.index===index && !state.paused) ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
-        </button>
-        <button>
-          <a href={link} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faLink} />
-          </a>
+        <button className="project-play-button" onClick={()=>control(state.videoRef)}>
+          {(state.index===index && !state.paused) ? pauseIcon : playIcon}
         </button>
         <div className="project-name" onClick={start}>{name}</div>
-        <button onClick={seeDescription}>
-          {descOpen===index ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretLeft} />}
+        <button className="project-link-button">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            {linkIcon}
+          </a>
         </button>
       </div>
-      {descOpen===index 
-        && 
-        <div className="project-description">
-          {description}
-        </div>
-      }
     </div>
   )
 }

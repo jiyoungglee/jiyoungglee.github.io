@@ -1,15 +1,16 @@
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { Actions, PlayerContext } from "../store/PlayerContext";
 import PlayerControls from "./PlayerControls";
 import PreviewPopup from "./PreviewPopup";
 
 import "../Styles/PreviewMode.css";
+import Video from "./Video";
 
 function PreviewMode() {
   const { state, dispatch } = useContext(PlayerContext);
-  
+
+  const openPlayerIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M7 10l5 5 5-5z"></path></svg>
+
   function togglePlayer() {
     dispatch({
       type: Actions.TOGGLE,
@@ -19,7 +20,9 @@ function PreviewMode() {
 
   return (
     <div>
-      <PreviewPopup />
+      <PreviewPopup>
+        <Video />
+      </PreviewPopup>
       <div className="footer">
         <div className="preview-bar">
           <div className="left-controls">
@@ -29,11 +32,8 @@ function PreviewMode() {
             <span>{state.name}</span>
           </div>
           <div className="right-controls">
-            <button>
-              {state.open
-                ? <FontAwesomeIcon icon={faCaretDown} size="xl" onClick={togglePlayer}/>
-                : <FontAwesomeIcon icon={faCaretUp} size="xl" onClick={togglePlayer}/>
-              }
+            <button className={state.open ? "caret" : "caret up"} onClick={togglePlayer}>
+              {openPlayerIcon}
             </button>
           </div>
         </div>

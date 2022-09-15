@@ -1,3 +1,12 @@
+.page {
+  overflow-y: auto;
+  height: 100vh;
+}
+
 .content {
-  margin: 0 20px;
+  padding: 0 50px;
+}
+
+.shortened {
+  height: calc(100vh - 60px);
 }

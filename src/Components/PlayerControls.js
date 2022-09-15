@@ -1,5 +1,3 @@
-import { faBackwardStep, faForwardStep, faPause, faPlay } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { Actions, PlayerContext } from "../store/PlayerContext";
 import { projects } from "../store/Projects";
@@ -8,6 +6,12 @@ import "../Styles/PlayerControls.css";
 
 function PlayerControls() {
   const { state, dispatch } = useContext(PlayerContext);
+
+  const playIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M8 5v14l11-7z"></path></svg>
+  const pauseIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path></svg>
+  const nextIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"></path></svg>
+  const previousIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"></path></svg>
+  
 
   function play() {
     if (state.paused) {
@@ -33,6 +37,7 @@ function PlayerControls() {
           index: state.index + 1,
           name: nextProject.name,
           demo: nextProject.demo,
+          description: nextProject.description,
           open: state.open,
           paused: false,
         }
@@ -50,6 +55,7 @@ function PlayerControls() {
           index: state.index - 1,
           name: previousProject.name,
           demo: previousProject.demo,
+          description: previousProject.description,
           open: state.open,
           paused: false,
         }
@@ -59,17 +65,17 @@ function PlayerControls() {
 
   return (
     <div className="player-controls">
-      <button onClick={previous}>
-        <FontAwesomeIcon icon={faBackwardStep} size="lg" />
+      <button className="skip-button" onClick={previous}>
+        {previousIcon}
       </button>
-      <button onClick={play}>
-        { state.paused
-          ? <FontAwesomeIcon icon={faPlay} size="2x" />
-          : <FontAwesomeIcon icon={faPause} size="2x" /> 
-        }
+      <button className="play-pause-button" onClick={play}>
+          { state.paused
+            ? playIcon
+            : pauseIcon
+          }
       </button>
-      <button onClick={next}>
-        <FontAwesomeIcon icon={faForwardStep} size="lg" />
+      <button className="skip-button" onClick={next}>
+        {nextIcon}
       </button>
     </div>
   )

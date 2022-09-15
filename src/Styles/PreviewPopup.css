@@ -1,4 +1,9 @@
 .popup {
+  /* animation-name: show;
+  animation-duration: 200ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards; */
+
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -6,13 +11,41 @@
   height: calc(100% - 54px);
   width: 100vw;
   background-color: black;
+
+  transition-duration: 500ms;
+  transition-property: transform;
+  transition-timing-function: linear;
+  /* transform-origin: 0 100%; */
+  transform: translate3d(0, 0, 0);
 }
+
+.popup.minimized {
+  transform: translate3d(0, 100%, 0);
+  /* visibility: hidden; set a few seconds after */
+}
+
+.video-container {
+  visibility: visible;
+}
+
+/* @keyframes show {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
 
 .miniplayer {
   position: fixed;
-  bottom: 90px;
-  right: 0;
+  top: -300px; 
+  right: 50px;
   width: 300px;
+  height: 300px;
 }
 
 .preview-left {
@@ -25,20 +58,44 @@
 
 .preview-right {
   display: flex;
+  flex-direction: column;
   padding: 0 20px;
-  overflow-y: scroll;
   height: 50%;
 }
 
-.preview-left video {
+.preview-tabs {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  border-bottom: solid 1px #ffffff1a;
+}
+
+.tab {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tab.open {
+  border-bottom: solid 1px #ffffff;
+}
+
+.tab-content {
+  overflow-y: scroll;
+}
+
+.popup video {
   height: 100%;
   width: 100%;
 }
 
 .exit-preview {
   position: absolute;
+  top: 55px;
   width: 100%;
-  height: 100%;
+  height: 63%;
   text-align: right;
 }
 
