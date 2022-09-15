@@ -18,6 +18,12 @@ function App() {
           <ProjectList />
           <Education />
           <Skills />
+          <div id="aboutme">
+            <h2>About</h2>
+            <div>
+              Hi my name is Jiyoung Lee and I am a newly self-taught front-end developer. Feel free to explore my page and take a look at my projects.
+            </div>
+          </div>
         </div>
       </div>
       { state.index !== null && <PreviewMode /> }

@@ -1,48 +1,83 @@
 .about {
-  margin: 0 20px;
-}
-
-.about-block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 10px;
+  position: relative;
+  height: 300px;
 }
 
 .profile-pic {
-  width: 150px;
-  height: 150px;
-  margin-right: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.about-block h2 {
-  margin-left: 10px;
+.about-background {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg,#030303 8.98%,#00000000 100%);
+  z-index: 1;
+}
+
+.about-content-container {
+  width: 100%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+  padding-bottom: 20px;
+}
+
+.about-me {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
+  font-weight: 400;
+}
+
+.about-me-link {
+  text-decoration: none;
+}
+
+.about-me-link:visited {
+  color: inherit;
 }
 
 .icon-strip {
   display: flex;
   list-style: none;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 30px 20px;
+  justify-content: space-between;
+  margin: 20px 0;
   width: 100%;
-}
-
-.icon-strip a {
-  padding: 0px 15px;
 }
 
 .icon {
   font-size: 32px;
 }
 
-.icon-strip a:link, a:visited {
-  color: black;
-}
-
 .github {
   fill: white;
   height: 32px;
   width: 32px;
+}
+
+@media only screen and (min-width: 540px) {
+  .about {
+    height: 400px;
+  }
+  .about-me {
+    overflow: visible;
+    white-space: pre-wrap;
+  }
+  .about-me-link {
+    display: none;
+  }
+  .icon-strip {
+    width: 300px;
+  }
 }

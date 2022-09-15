@@ -3,6 +3,7 @@
   bottom: 0;
   background-color: #929292;
   width: 100vw;
+  z-index: 10;
 }
 
 .preview-bar {
