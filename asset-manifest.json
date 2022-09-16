@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/jiyoung-portfolio/static/css/main.c9d08b0b.css",
-    "main.js": "/jiyoung-portfolio/static/js/main.1bf02499.js",
+    "main.js": "/jiyoung-portfolio/static/js/main.995129a5.js",
     "static/media/social-feed-demo.mov": "/jiyoung-portfolio/static/media/social-feed-demo.f67b4c13c84bc456b11e.mov",
     "static/media/mall-trip-demo.mov": "/jiyoung-portfolio/static/media/mall-trip-demo.dde58e5ccc5fe338a47a.mov",
     "static/media/portfolio-demo.mov": "/jiyoung-portfolio/static/media/portfolio-demo.debb5676a695c2b74103.mov",
     "index.html": "/jiyoung-portfolio/index.html",
     "main.c9d08b0b.css.map": "/jiyoung-portfolio/static/css/main.c9d08b0b.css.map",
-    "main.1bf02499.js.map": "/jiyoung-portfolio/static/js/main.1bf02499.js.map"
+    "main.995129a5.js.map": "/jiyoung-portfolio/static/js/main.995129a5.js.map"
   },
   "entrypoints": [
     "static/css/main.c9d08b0b.css",
-    "static/js/main.1bf02499.js"
+    "static/js/main.995129a5.js"
   ]
 }
