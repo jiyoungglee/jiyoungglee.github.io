@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/jiyoung-portfolio/static/css/main.e23e9d06.css",
-    "main.js": "/jiyoung-portfolio/static/js/main.246d078e.js",
+    "main.css": "/jiyoung-portfolio/static/css/main.f576c873.css",
+    "main.js": "/jiyoung-portfolio/static/js/main.cdff4bf5.js",
     "static/media/social-feed-demo.mov": "/jiyoung-portfolio/static/media/social-feed-demo.f67b4c13c84bc456b11e.mov",
     "static/media/mall-trip-demo.mov": "/jiyoung-portfolio/static/media/mall-trip-demo.dde58e5ccc5fe338a47a.mov",
     "static/media/portfolio-demo.mov": "/jiyoung-portfolio/static/media/portfolio-demo.debb5676a695c2b74103.mov",
     "index.html": "/jiyoung-portfolio/index.html",
-    "main.e23e9d06.css.map": "/jiyoung-portfolio/static/css/main.e23e9d06.css.map",
-    "main.246d078e.js.map": "/jiyoung-portfolio/static/js/main.246d078e.js.map"
+    "main.f576c873.css.map": "/jiyoung-portfolio/static/css/main.f576c873.css.map",
+    "main.cdff4bf5.js.map": "/jiyoung-portfolio/static/js/main.cdff4bf5.js.map"
   },
   "entrypoints": [
-    "static/css/main.e23e9d06.css",
-    "static/js/main.246d078e.js"
+    "static/css/main.f576c873.css",
+    "static/js/main.cdff4bf5.js"
   ]
 }
