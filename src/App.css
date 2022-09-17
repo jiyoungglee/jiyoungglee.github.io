@@ -1,18 +1,20 @@
-.page {
-  overflow-y: auto;
-  height: 100vh;
+.app {
+  padding-bottom: 20px;
+}
+
+.page-padding {
+  padding-bottom: 60px;
 }
 
 .content {
-  padding: 0 50px;
-}
-
-.shortened {
-  height: calc(100vh - 60px);
+  padding: 0 30px;
 }
 
 @media only screen and (min-width: 540px) {
   #aboutme {
     display: none;
+  }
+  .content {
+    padding: 0 50px;
   }
 }

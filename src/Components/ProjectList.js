@@ -1,12 +1,8 @@
 import ProjectItem from "./ProjectItem";
 import "../Styles/ProjectList.css";
-import { useContext } from "react";
 import { projects } from "../store/Projects";
-import { PlayerContext } from "../store/PlayerContext";
 
 function ProjectList() {
-  const { state } = useContext(PlayerContext);
-
   function getProjects() {
     return projects.map(({ link, name, description, demo }, index) => {
       return (
@@ -23,7 +19,6 @@ function ProjectList() {
 
   return (
     <div className="projects">
-      {!state.open && <h2>Projects</h2>}
       <div className="project-list">
         {getProjects()}
       </div>

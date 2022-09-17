@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 10px 0;
   border-bottom: solid 1px #ffffff1a;
+  font-weight: 400;
 }
 
 .project-item {
@@ -19,7 +20,7 @@
 }
 
 .project-play-button {
-  padding: 4px;
+  padding:5px;
 }
 
 .project-item svg {
@@ -33,7 +34,7 @@
 }
 
 .project-link-button {
-  padding: 7px;
+  padding: 8px;
 }
 
 .project-number {
@@ -52,12 +53,11 @@
 
 .selected {
   background-color: #ffffff1a;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .project-description {
-  margin-left: 100px;
-  margin-top: 10px;
+  margin: 10px 20px;
   font-weight: normal;
 }
 

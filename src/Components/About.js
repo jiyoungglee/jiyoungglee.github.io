@@ -11,7 +11,7 @@ function About() {
         <div className="about-content-container">
           <div className="about-content">
             <h2>Jiyoung Lee</h2>
-            <div className="about-me">Hi my name is Jiyoung Lee and I am a newly self-taught front-end developer. Feel free to explore my page and take a look at my projects.</div>
+            <div className="about-me">Hi my name is Jiyoung Lee and I am a front-end developer. Feel free to explore my page and take a look at my projects.</div>
             <a className="about-me-link" href="#aboutme">MORE</a>
             <div className="icon-strip">
               <a href="https://github.com/jiyoungglee" target="_blank" rel="noopener noreferrer">

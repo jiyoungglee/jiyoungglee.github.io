@@ -8,7 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #030303;
   color: white;
-  overflow-y: hidden;
 }
 
 code {
@@ -22,7 +21,7 @@ code {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: #3e3e3e; 
 }
  
 /* Handle */
