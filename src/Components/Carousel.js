@@ -1,8 +1,11 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import '../Styles/Carousel.css';
 
 function Carousel(props) {
+  const [rightScrollDisabled, setRightScrollDisabled] = useState(false);
+  const [leftScrollDisabled, setLeftScrollDisabled] = useState(true);
   const scrollRef = useRef();
+
   const leftAngle = 
     <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
       <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" ></path>
@@ -15,6 +18,26 @@ function Carousel(props) {
 
   const ITEM_WIDTH = 172;
   const GAP_WIDTH = 20;
+
+  useEffect(() => {
+    function disableScroll() {
+      const currentX = scrollRef.current.scrollLeft
+      const carouselWidth= scrollRef.current.offsetWidth;
+
+      if (currentX === 0) {
+        setLeftScrollDisabled(true)
+      }
+      if (currentX + carouselWidth === scrollRef.current.scrollWidth) {
+        setRightScrollDisabled(true)
+        setLeftScrollDisabled(false)
+      }
+      else if (currentX !==0) {
+        setLeftScrollDisabled(false);
+        setRightScrollDisabled(false)
+      }
+    }
+    scrollRef.current.addEventListener("scroll", disableScroll)
+  })
 
   function scrollLeft() {
     const currentX = scrollRef.current.scrollLeft
@@ -61,10 +84,10 @@ function Carousel(props) {
       <div className="carousel-heading">
         <h2>{props.heading}</h2>
         <div className="carousel-controls">
-          <button className="left-angle" onClick={scrollLeft}>
+          <button className={`left-angle ${leftScrollDisabled ? 'disabled' : ''}`} onClick={scrollLeft} disabled={leftScrollDisabled}>
               {leftAngle}
           </button>
-          <button className="right-angle" onClick={scrollRight}>
+          <button className={`right-angle ${rightScrollDisabled ? 'disabled' : ''}`} onClick={scrollRight} disabled={rightScrollDisabled}>
               {rightAngle}
           </button>
         </div>

@@ -18,12 +18,19 @@
   background: none;
   padding: 3px;
   cursor: pointer;
+  transition-property: opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
 }
 
 .left-angle svg, .right-angle svg {
   fill: white;
   height: 100%;
   width: 100%;
+}
+
+.disabled {
+  opacity: 40%;
 }
 
 .carousel {
