@@ -1,8 +1,8 @@
 import { faCss3, faHtml5, faJs, faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef } from "react";
 
+import Carousel from './Carousel';
+import CarouselItem from './CarouselItem';
 import '../Styles/Skills.css';
 
 function Skills() {
@@ -15,133 +15,30 @@ function Skills() {
       />
     </svg>
 
-    const leftAngle = 
-      <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" ></path>
-      </svg>
-
-    const rightAngle = 
-      <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
-        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-      </svg>
-
-    const scrollRef = useRef();
-
-    const ITEM_WIDTH = 172;
-    const GAP_WIDTH = 20;
-
-    function scrollLeft() {
-      const currentX = scrollRef.current.scrollLeft
-      const carouselWidth= scrollRef.current.offsetWidth - 2;
-      const firstItemVisible = (ITEM_WIDTH - GAP_WIDTH) - (currentX % ITEM_WIDTH);
-
-      if (firstItemVisible < ITEM_WIDTH-GAP_WIDTH) {      
-        scrollRef.current.scroll({
-          top: 0,
-          left: currentX - (carouselWidth - firstItemVisible),
-          behavior: 'smooth'
-        })
-      } else {
-        scrollRef.current.scroll({
-          top: 0,
-          left: currentX - (carouselWidth - firstItemVisible + ITEM_WIDTH),
-          behavior: 'smooth'
-        })
-      }
-    }
-
-    function scrollRight() {
-      const currentX = scrollRef.current.scrollLeft
-      const carouselWidth= scrollRef.current.offsetWidth - 2;
-      const lastItemVisible = (carouselWidth+currentX) % ITEM_WIDTH;
-
-      if (lastItemVisible < ITEM_WIDTH-GAP_WIDTH) {
-        scrollRef.current.scroll({
-          top: 0,
-          left: carouselWidth+currentX-lastItemVisible,
-          behavior: 'smooth'
-        })
-      } else {
-        scrollRef.current.scroll({
-          top: 0,
-          left: currentX + carouselWidth + (ITEM_WIDTH - lastItemVisible),
-          behavior: 'smooth'
-        })
-      }
-    }
-
   return (
-    <div className="skills">
-      <div className="skills-top">
-        <h2>Skills</h2>
-        <div className="carousel-controls">
-          <button className="left-angle" onClick={scrollLeft}>
-              {leftAngle}
-          </button>
-          <button className="right-angle" onClick={scrollRight}>
-              {rightAngle}
-          </button>
-        </div>
-      </div>
-      <div ref={scrollRef} className="carousel">
-        <div className="carousel-item">
-          <div className="icon-container">
-            <FontAwesomeIcon icon={faJs} />
-          </div>
-          <div className="skill-description">
-            Javascript
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="icon-container">
-            <FontAwesomeIcon icon={faReact} />
-          </div>
-          <div className="skill-description">
-            React
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="icon-container">
-            <FontAwesomeIcon icon={faCss3} />
-          </div>
-          <div className="skill-description">
-            CSS
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="icon-container">
-            <FontAwesomeIcon icon={faHtml5} />
-          </div>
-          <div className="skill-description">
-            HTML
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="icon-container">
-            <FontAwesomeIcon icon={faNodeJs} />
-          </div>
-          <div className="skill-description">
-            Node.js
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="icon-container">
-            {mySql}
-          </div>
-          <div className="skill-description">
-            MySQL
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="icon-container">
-            {mySql}
-          </div>
-          <div className="skill-description">
-            MySQL
-          </div>
-        </div>
-      </div>
-    </div>
+    <Carousel heading="Skills">
+      <CarouselItem type="square" description="Javascript">
+        <FontAwesomeIcon className="skills-icon" icon={faJs} />
+      </CarouselItem>
+      <CarouselItem type="square" description="React">
+        <FontAwesomeIcon className="skills-icon" icon={faReact} />
+      </CarouselItem>
+      <CarouselItem type="square" description="CSS">
+        <FontAwesomeIcon className="skills-icon" icon={faCss3} />
+      </CarouselItem>
+      <CarouselItem type="square" description="HTML">
+        <FontAwesomeIcon className="skills-icon" icon={faHtml5} />
+      </CarouselItem>
+      <CarouselItem type="square" description="Node.js">
+        <FontAwesomeIcon className="skills-icon" icon={faNodeJs} />
+      </CarouselItem>
+      <CarouselItem type="square" description="MySQL">
+        {mySql}
+      </CarouselItem>
+      <CarouselItem type="square" description="MySQL">
+        {mySql}
+      </CarouselItem>
+    </Carousel>
   )
 };
 

@@ -1,0 +1,44 @@
+.carousel-heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-controls {
+  display: flex;
+  width: 85px;
+  justify-content: space-between;
+}
+
+.left-angle, .right-angle {
+  border-radius: 50%;
+  border: solid 1px #ffffff4e;
+  width: 30px;
+  height: 30px;
+  background: none;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.left-angle svg, .right-angle svg {
+  fill: white;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  gap: 20px;
+  padding: 0 1px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
