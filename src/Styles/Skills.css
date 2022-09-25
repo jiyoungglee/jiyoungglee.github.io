@@ -1,3 +1,46 @@
 .skills-icon {
   font-size: 120px;
 }
+
+#sql {
+  color: #0077D9;
+}
+
+#npm {
+  color: #D70000;
+}
+
+#css {
+  color: #1297FB;
+}
+
+#html {
+  color: #E64C18;
+}
+
+#react {
+  color: #5ADAFD;
+}
+
+#javascript {
+  color: #F5E300;
+}
+
+#nodejs {
+  color: #66A060;
+}
+
+.jirafill-1 {
+  fill:url(#linear-gradient);
+}
+
+.jirafill-2 {
+  fill:url(#linear-gradient-2);
+}
+
+.git {
+  stroke:none;
+  fill-rule:nonzero;
+  fill:#f03c2e;
+  fill-opacity:1;
+}

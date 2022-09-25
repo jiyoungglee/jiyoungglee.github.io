@@ -1,42 +1,131 @@
-import { faCss3, faHtml5, faJs, faReact, faNodeJs } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import Carousel from './Carousel';
 import CarouselItem from './CarouselItem';
+
+import { faCss3, faHtml5, faJs, faReact, faNodeJs, faNpm } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import '../Styles/Skills.css';
 
 function Skills() {
   const mySql = 
-    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 25.6 25.6">
+    <svg width="100" height="100" viewBox="0 0 25.6 25.6">
       <path 
         d="M179.076 94.886c-3.568-.1-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72l2.855 2.053c1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428l-1.34-1.293c-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.1c.98-.1 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713l2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436l-3.658-7.763c-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.5-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.5.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 15 .715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.1l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.1-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.5-.535-1.294-.178-1.83.088-.357.268-.5.623-.58.58-.5 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.1 4.37.5 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.1h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.1c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z"
         transform="matrix(.390229 0 0 .38781 -46.300037 -16.856717)" 
-        fill="#fff"
+        fill="#00608C"
       />
     </svg>
+  
+  const rLogo = 
+  <svg preserveAspectRatio="xMidYMid" width="120" height="120" viewBox="0 0 724 561">
+    <defs>
+      <linearGradient id="gradientFill-1" x1="0" x2="1" y1="0" y2="1" gradientUnits="objectBoundingBox" spreadMethod="pad">
+        <stop offset="0" stop-color="rgb(203,206,208)" stop-opacity="1"/>
+        <stop offset="1" stop-color="rgb(132,131,139)" stop-opacity="1"/>
+      </linearGradient>
+      <linearGradient id="gradientFill-2" x1="0" x2="1" y1="0" y2="1" gradientUnits="objectBoundingBox" spreadMethod="pad">
+        <stop offset="0" stop-color="rgb(39,109,195)" stop-opacity="1"/>
+        <stop offset="1" stop-color="rgb(22,92,170)" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+    <path d="M361.453,485.937 C162.329,485.937 0.906,377.828 0.906,244.469 C0.906,111.109 162.329,3.000 361.453,3.000 C560.578,3.000 722.000,111.109 722.000,244.469 C722.000,377.828 560.578,485.937 361.453,485.937 ZM416.641,97.406 C265.289,97.406 142.594,171.314 142.594,262.484 C142.594,353.654 265.289,427.562 416.641,427.562 C567.992,427.562 679.687,377.033 679.687,262.484 C679.687,147.971 567.992,97.406 416.641,97.406 Z" fill="url(#gradientFill-1)" fill-rule="evenodd"/>
+    <path d="M550.000,377.000 C550.000,377.000 571.822,383.585 584.500,390.000 C588.899,392.226 596.510,396.668 602.000,402.500 C607.378,408.212 610.000,414.000 610.000,414.000 L696.000,559.000 L557.000,559.062 L492.000,437.000 C492.000,437.000 478.690,414.131 470.500,407.500 C463.668,401.969 460.755,400.000 454.000,400.000 C449.298,400.000 420.974,400.000 420.974,400.000 L421.000,558.974 L298.000,559.026 L298.000,152.938 L545.000,152.938 C545.000,152.938 657.500,154.967 657.500,262.000 C657.500,369.033 550.000,377.000 550.000,377.000 ZM496.500,241.024 L422.037,240.976 L422.000,310.026 L496.500,310.002 C496.500,310.002 531.000,309.895 531.000,274.877 C531.000,239.155 496.500,241.024 496.500,241.024 Z" fill="url(#gradientFill-2)" fill-rule="evenodd"/>
+  </svg>
+
+  const python = 
+  <svg viewBox="0 0 512 512" width="130" height="130">
+    <path 
+      d="M194.005,240.252h105.054c29.216,0,52.529-24.101,52.529-53.414V86.603
+        c0-28.525-24.002-49.871-52.529-54.691c-35.214-5.804-73.478-5.509-105.054,0.097c-44.462,7.87-52.527,24.298-52.527,54.693
+        v21.453H246.63v31.959H102.033c-30.591,0-57.349,18.394-65.709,53.315c-9.64,40.035-10.033,65.02,0,106.826
+        c7.476,31.085,25.28,53.314,55.872,53.314h36.101v-48.001C128.296,270.845,158.298,240.252,194.005,240.252L194.005,240.252z" 
+      fill="#347AB4"
+    />
+    <path 
+      d="M474.975,209.372c-7.575-30.395-21.935-53.315-52.527-53.315h-39.443v46.626
+      c0,36.199-30.692,66.691-65.71,66.691H212.24c-28.724,0-52.528,24.594-52.528,53.414v100.138
+      c0,28.524,24.788,45.246,52.528,53.413c33.247,9.737,65.215,11.509,105.054,0c26.462-7.675,52.529-23.116,52.529-53.413v-20.997
+      H264.867v-32.417h157.58c30.593,0,41.904-21.346,52.527-53.314C485.992,283.244,485.501,251.57,474.975,209.372L474.975,209.372z"
+      fill="#FFCA1D"
+    />
+    <path 
+      d="M187.415,89.594c-10.479,0-18.975-8.591-18.975-19.164c0.094-10.668,8.496-19.259,18.975-19.259
+        c10.385,0,18.976,8.685,18.976,19.259C206.39,81.003,197.894,89.594,187.415,89.594z" 
+      fill="#FFFFFF" />
+    <path 
+      d="M314.908,460.076c-10.479,0-18.976-8.591-18.976-19.164c0.095-10.668,8.496-19.259,18.976-19.259
+        c10.385,0,18.976,8.685,18.976,19.259C333.884,451.485,325.388,460.076,314.908,460.076z" 
+      fill="#FFFFFF"
+    />
+  </svg>
+
+  const jira = 
+    <svg id="Logos" width="130" height="130" viewBox="0 0 80 80">
+      <defs>
+        <linearGradient id="linear-gradient" x1="38.11" y1="18.54" x2="23.17" y2="33.48" gradientUnits="userSpaceOnUse">
+          <stop offset="0.18" stop-color="#0052cc" />
+          <stop offset="1" stop-color="#2684ff" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="42.07" y1="61.47" x2="56.98" y2="46.55" />
+      </defs>
+      <path fill="#2684ff" d="M74.18,38,43,6.9l-3-3h0L16.58,27.32h0L5.86,38a2.86,2.86,0,0,0,0,4.05L27.28,63.51,40,76.25,63.47,52.81l.36-.36L74.18,42.09A2.86,2.86,0,0,0,74.18,38ZM40,50.77l-10.7-10.7L40,29.37l10.7,10.7Z" />
+      <path className="jirafill-1" d="M40,29.37A18,18,0,0,1,40,4L16.54,27.37,29.28,40.11,40,29.37Z" />
+      <path className="jirafill-2" d="M50.75,40,40,50.77a18,18,0,0,1,0,25.48h0L63.5,52.78Z" />
+    </svg>
+
+  const git = 
+  <svg width="130" height="130" viewBox="0 0 92 92">
+    <defs>
+      <clipPath id="a"><path d="M0 .113h91.887V92H0Zm0 0"/></clipPath>
+    </defs>
+    <g clip-path="url(#a)">
+      <path
+        className="git"
+        d="M90.156 41.965 50.036 1.848a5.918 5.918 0 0 0-8.372 0l-8.328 8.332 10.566 10.566a7.03 7.03 0 0 1 7.23 1.684 7.034 7.034 0 0 1 1.669 7.277l10.187 10.184a7.028 7.028 0 0 1 7.278 1.672 7.04 7.04 0 0 1 0 9.957 7.05 7.05 0 0 1-9.965 0 7.044 7.044 0 0 1-1.528-7.66l-9.5-9.497V59.36a7.04 7.04 0 0 1 1.86 11.29 7.04 7.04 0 0 1-9.957 0 7.04 7.04 0 0 1 0-9.958 7.06 7.06 0 0 1 2.304-1.539V33.926a7.049 7.049 0 0 1-3.82-9.234L29.242 14.272 1.73 41.777a5.925 5.925 0 0 0 0 8.371L41.852 90.27a5.925 5.925 0 0 0 8.37 0l39.934-39.934a5.925 5.925 0 0 0 0-8.371"/>
+    </g>
+  </svg>
 
   return (
-    <Carousel heading="Skills">
+    <Carousel heading="Technical Knowledge & Skills">
       <CarouselItem type="square" description="Javascript">
-        <FontAwesomeIcon className="skills-icon" icon={faJs} />
+        <FontAwesomeIcon id="javascript" className="skills-icon" icon={faJs} />
       </CarouselItem>
       <CarouselItem type="square" description="React">
-        <FontAwesomeIcon className="skills-icon" icon={faReact} />
+        <FontAwesomeIcon id="react" className="skills-icon" icon={faReact} />
       </CarouselItem>
       <CarouselItem type="square" description="CSS">
-        <FontAwesomeIcon className="skills-icon" icon={faCss3} />
+        <FontAwesomeIcon id="css" className="skills-icon" icon={faCss3} />
       </CarouselItem>
       <CarouselItem type="square" description="HTML">
-        <FontAwesomeIcon className="skills-icon" icon={faHtml5} />
+        <FontAwesomeIcon id="html" className="skills-icon" icon={faHtml5} />
       </CarouselItem>
       <CarouselItem type="square" description="Node.js">
-        <FontAwesomeIcon className="skills-icon" icon={faNodeJs} />
+        <FontAwesomeIcon id="nodejs" className="skills-icon" icon={faNodeJs} />
       </CarouselItem>
       <CarouselItem type="square" description="MySQL">
         {mySql}
       </CarouselItem>
-      <CarouselItem type="square" description="MySQL">
-        {mySql}
+      <CarouselItem type="square" description="SQL">
+        <FontAwesomeIcon id="sql" className="skills-icon" icon={faDatabase} />
+      </CarouselItem>
+      <CarouselItem type="square" description="npm">
+        <FontAwesomeIcon id="npm" className="skills-icon" icon={faNpm} />
+      </CarouselItem>
+      <CarouselItem type="square" description="R">
+        {rLogo}
+      </CarouselItem>
+      <CarouselItem type="square" description="python">
+        {python}
+      </CarouselItem>
+      <CarouselItem type="square" description="JIRA">
+        {jira}
+      </CarouselItem>
+      <CarouselItem type="square" description="git">
+        {git}
+      </CarouselItem>
+      <CarouselItem type="square" description="JSON">
+        <img src="https://www.json.org/img/json160.gif" alt="json logo" height="120" width="120" />
       </CarouselItem>
     </Carousel>
   )

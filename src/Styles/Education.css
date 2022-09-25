@@ -3,7 +3,18 @@
 }
 
 .grad-icon {
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+}
+.grad-icon > * {
+  font-size: 35px;
+}
+
+.capm-badge {
+  width: 45px;
+  height: 45px;
 }
 
 .degree {
@@ -46,6 +57,5 @@
 
 .coursework h2 {
   font-size: 22px;
-  font-style: italic;
-  font-weight: 500;
+  font-weight: 400;
 }

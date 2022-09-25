@@ -1,6 +1,6 @@
 .about {
   position: relative;
-  height: 250px;
+  height: 270px;
 }
 
 .profile-pic {
@@ -16,7 +16,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(360deg,#030303 8.98%,#00000000 100%);
+  background: linear-gradient(360deg,#030303 7%,#00000000 100%);
   z-index: 1;
 }
 
@@ -69,7 +69,7 @@
 
 @media only screen and (min-width: 540px) {
   .about {
-    height: 300px;
+    height: 370px;
   }
   .about-content {
     margin: 0 50px;
@@ -88,18 +88,18 @@
 
 @media only screen and (min-width: 1024px) {
   .about {
-    height: 400px;
+    height: 450px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .about {
-    height: 500px;
+    height: 550px;
   }
 }
 
 @media only screen and (min-width: 1580px) {
   .about {
-    height: 500px;
+    height: 650px;
   }
 }

@@ -6,7 +6,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 function About() {
   return(
     <div className="about">
-      <img className="profile-pic" alt="profile" src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" />
+      <img className="profile-pic" alt="profile" src={require('../Previews/Jiyoung.jpeg')} />
       <div className="about-background">
         <div className="about-content-container">
           <div className="about-content">
@@ -20,8 +20,10 @@ function About() {
                 </svg>
               </a>
               <a href="https://www.linkedin.com/in/jiyoung-g-lee" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} inverse className="icon" /></a>
-              <a href="/"><FontAwesomeIcon icon={faFile} inverse className="icon" /></a>
-              <a href="/"><FontAwesomeIcon icon={faEnvelope} inverse className="icon" /></a>
+              <a href="/">
+                <FontAwesomeIcon icon={faFile} inverse className="icon" />
+              </a>
+              <a href="mailto:jiyoung.g.lee118@gmail.com"><FontAwesomeIcon icon={faEnvelope} inverse className="icon" /></a>
             </div>
           </div>
         </div>
