@@ -9,16 +9,20 @@ export const projects = [
     demo: require('../Previews/mall-trip-demo.mov'),
   },
   {      
-    link: 'https://jiyoungglee.github.io/social-feed/', 
+    link: '/social-feed', 
     name: 'Social Feed', 
     description: {
       heading: `Social Feed application built with React.js and Express.js. In Progress.`,
-      bullets: ['Bullet 1', 'Bullet 2', 'Bullet 3'],
+      bullets: [
+        'Implemented common social media features', 
+        'Hosted MySQL database and API Express server on Heroku', 
+        'UseContext to prevent prop drilling'
+      ],
     },
     demo: require('../Previews/social-feed-demo.mov'),
   },
   {      
-    link: 'https://jiyoungglee.github.io/jiyoung-portfolio/', 
+    link: '/', 
     name: 'Portfolio Website', 
     description: {
       heading: `Portfolio Website to showcase projects and resume`,
