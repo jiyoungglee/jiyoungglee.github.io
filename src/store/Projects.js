@@ -1,22 +1,14 @@
 export const projects = [
-  {
-    link: '/mall-trip', 
-    name: 'Mall Trip', 
-    description: {
-      heading: `Mall Trip application built with React.js. In Progress.`,
-      bullets: ['Bullet 1', 'Bullet 2', 'Bullet 3'],
-    },
-    demo: require('../Previews/mall-trip-demo.mov'),
-  },
   {      
     link: '/social-feed', 
     name: 'Social Feed', 
     description: {
-      heading: `Social Feed application built with React.js and Express.js. In Progress.`,
+      heading: `Social newsfeed application with common social media features to post and interact with users.`,
       bullets: [
-        'Implemented common social media features', 
-        'Hosted MySQL database and API Express server on Heroku', 
-        'UseContext to prevent prop drilling'
+        'Implemented user sign up and authentication using Passport.js local strategy',
+        'Built an API that provides search and CRUD functionality for user posts using MYSQL and Express, hosted on Heroku',
+        'Componentized reusable elements using React hooks with a useContext store to prevent prop drilling',
+        'Demonstrated UX best practices using mobile first design, form validation, and error handling.',
       ],
     },
     demo: require('../Previews/social-feed-demo.mov'),
@@ -25,8 +17,12 @@ export const projects = [
     link: '/', 
     name: 'Portfolio Website', 
     description: {
-      heading: `Portfolio Website to showcase projects and resume`,
-      bullets: ['Bullet 1', 'Bullet 2', 'Bullet 3'],
+      heading: `Music player themed portfolio website to showcase projects and resume`,
+      bullets: [
+        'Synchronized maximized and PIP(Picture in Picture) video players with React hooks (useRef and useContext)',
+        'Created and designed seamless image carousel from scratch using pure Javascript and CSS',
+        'Implemented CI/CD with Github Actions to automate deployment to Github Pages on git push'
+    ],
     },
     demo: require('../Previews/portfolio-demo.mov'),
   },
@@ -35,7 +31,10 @@ export const projects = [
     name: 'Shopping List', 
     description: {
       heading: `Editable shopping checklist`,
-      bullets: ['Bullet 1', 'Bullet 2', 'Bullet 3'],
+      bullets: [
+        'Implemented persistent state by saving user data in browser’s local storage',
+        'Perform CRUD operations through array manipulation'
+      ],
     },
     demo: require('../Previews/mall-trip-demo.mov'),
   },
@@ -43,9 +42,21 @@ export const projects = [
     link: '/pricing-page', 
     name: 'Pricing Page', 
     description: {
-      heading: `Basic Pricing Page with different subscription options`,
-      bullets: ['Bullet 1', 'Bullet 2', 'Bullet 3'],
+      heading: `Landing page template with common pricing/subscription page features`,
+      bullets: [
+        'Created webpage using UX best practices of mobile first design and accessibility',
+        'Verified page accessibility with 100% Lighthouse accessibility score',
+      ],
     },
     demo: require('../Previews/social-feed-demo.mov'),
+  },
+  {
+    link: '/mall-trip', 
+    name: 'Mall Trip', 
+    description: {
+      heading: `Mall Trip application built with React.js. In Progress.`,
+      bullets: ['In Progress'],
+    },
+    demo: require('../Previews/mall-trip-demo.mov'),
   },
 ]

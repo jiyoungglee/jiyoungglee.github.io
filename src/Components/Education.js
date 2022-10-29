@@ -28,7 +28,7 @@ function Education() {
       </div>
       <div className="coursework">
         <Carousel heading="Related Coursework">
-          <CarouselItem type="round" description="Javascript">
+          <CarouselItem type="round" description="CS Fundamentals">
             <div className="course">Fundamentals of Computer Science 1 & 2</div>
           </CarouselItem>
           <CarouselItem type="round" description="Discrete Stuctures">
