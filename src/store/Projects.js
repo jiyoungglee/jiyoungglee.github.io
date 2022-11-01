@@ -36,7 +36,7 @@ export const projects = [
         'Perform CRUD operations through array manipulation'
       ],
     },
-    demo: require('../Previews/mall-trip-demo.mov'),
+    demo: require('../Previews/shopping-list-demo.mov'),
   },
   {      
     link: '/pricing-page', 
@@ -48,7 +48,7 @@ export const projects = [
         'Verified page accessibility with 100% Lighthouse accessibility score',
       ],
     },
-    demo: require('../Previews/social-feed-demo.mov'),
+    demo: require('../Previews/pricing-page-demo.mov'),
   },
   {
     link: '/mall-trip', 

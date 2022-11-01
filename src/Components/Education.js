@@ -14,7 +14,7 @@ function Education() {
         </div>
         <div className="degree-details">
           <div className="degree-name">B.S Management Information Systems</div>
-          <div>2020 | Rutgers University</div>
+          <div>Rutgers University, Rutgers Business School</div>
         </div>
       </div>
       <div className="degree">
@@ -23,7 +23,7 @@ function Education() {
         </div>
         <div className="degree-details">
           <div className="degree-name">Certified Associate in Project Management (CAPM)</div>
-          <div>2021 | Project Management Institute</div>
+          <div>Project Management Institute</div>
         </div>
       </div>
       <div className="coursework">
