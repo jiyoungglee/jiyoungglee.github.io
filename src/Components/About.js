@@ -2,6 +2,7 @@ import "../Styles/About.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import resume from "../Previews/JiyoungResume.pdf";
 
 function About() {
   return(
@@ -20,7 +21,7 @@ function About() {
                 </svg>
               </a>
               <a href="https://www.linkedin.com/in/jiyoung-g-lee" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} inverse className="icon" /></a>
-              <a href="/">
+              <a href={resume}>
                 <FontAwesomeIcon icon={faFile} inverse className="icon" />
               </a>
               <a href="mailto:jiyoung.g.lee118@gmail.com"><FontAwesomeIcon icon={faEnvelope} inverse className="icon" /></a>

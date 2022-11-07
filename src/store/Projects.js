@@ -46,6 +46,7 @@ export const projects = [
       bullets: [
         'Created webpage using UX best practices of mobile first design and accessibility',
         'Verified page accessibility with 100% Lighthouse accessibility score',
+        'Implemented toggle functionality, dropdowns, and accordions using Javascript and CSS'
       ],
     },
     demo: require('../Previews/pricing-page-demo.mov'),
