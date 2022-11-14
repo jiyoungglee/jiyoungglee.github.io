@@ -10,5 +10,5 @@ root.render(
     <PlayerContextProvider>
       <App />
     </PlayerContextProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

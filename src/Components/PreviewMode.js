@@ -1,21 +1,21 @@
-import { useContext } from "react";
-import { Actions, PlayerContext } from "../store/PlayerContext";
-import PlayerControls from "./PlayerControls";
-import PreviewPopup from "./PreviewPopup";
+import { useContext } from 'react';
+import { Actions, PlayerContext } from '../store/PlayerContext';
+import PlayerControls from './PlayerControls';
+import PreviewPopup from './PreviewPopup';
 
-import "../Styles/PreviewMode.css";
-import Video from "./Video";
+import '../Styles/PreviewMode.css';
+import Video from './Video';
 
 function PreviewMode() {
   const { state, dispatch } = useContext(PlayerContext);
 
-  const openPlayerIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" ><path d="M7 10l5 5 5-5z"></path></svg>
+  const openPlayerIcon = <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M7 10l5 5 5-5z" /></svg>;
 
   function togglePlayer() {
     dispatch({
       type: Actions.TOGGLE,
-      payload: !state.open
-    })
+      payload: !state.open,
+    });
   }
 
   return (
@@ -32,14 +32,14 @@ function PreviewMode() {
             <span>{state.name}</span>
           </div>
           <div className="right-controls">
-            <button className={state.open ? "caret" : "caret up"} onClick={togglePlayer}>
+            <button type="button" className={state.open ? 'caret' : 'caret up'} onClick={togglePlayer}>
               {openPlayerIcon}
             </button>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default PreviewMode;

@@ -1,8 +1,8 @@
-import "../Styles/Education.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-import Carousel from "./Carousel";
-import CarouselItem from "./CarouselItem";
+import '../Styles/Education.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import Carousel from './Carousel';
+import CarouselItem from './CarouselItem';
 
 function Education() {
   return (
@@ -61,7 +61,7 @@ function Education() {
         </Carousel>
       </div>
     </div>
-  )
-};
+  );
+}
 
 export default Education;

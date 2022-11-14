@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { PlayerContext } from "../store/PlayerContext";
+import { PlayerContext } from '../store/PlayerContext';
 
 function ProjectDescription() {
   const { state } = useContext(PlayerContext);
@@ -7,14 +7,14 @@ function ProjectDescription() {
 
   return (
     <div className="project-description">
-       <p>{heading}</p>
-       <ul>
-        {bullets.map((bullet, idx) => (
-          <li key={idx}>{bullet}</li>
+      <p>{heading}</p>
+      <ul>
+        {bullets.map((bullet) => (
+          <li>{bullet}</li>
         ))}
-       </ul>
+      </ul>
     </div>
-  )
+  );
 }
 
 export default ProjectDescription;

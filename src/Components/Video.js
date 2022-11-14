@@ -6,21 +6,20 @@ function Video() {
   const videoRef = useRef();
 
   useEffect(() => {
-    function changeVideo(videoRef) {
+    function changeVideo(video) {
       dispatch({
         type: Actions.LOAD,
         payload: {
-          videoRef,
-        }
-      })
+          videoRef: video,
+        },
+      });
     }
     changeVideo(videoRef.current);
   }, [dispatch, state.demo]);
 
   return (
-    <video ref={videoRef} autoPlay loop muted src={state.demo} type="video/mp4">
-    </video>
-  )
+    <video ref={videoRef} autoPlay loop muted src={state.demo} type="video/mp4" />
+  );
 }
 
 export default Video;
