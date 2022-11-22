@@ -1,4 +1,4 @@
-# [Jiyoung Lee Portfolio Website] (https://github.com/jiyoungglee/jiyoungglee.github.io)
+# [Jiyoung Lee Portfolio Website](https://github.com/jiyoungglee/jiyoungglee.github.io)
 
 ## About
 
