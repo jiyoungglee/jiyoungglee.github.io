@@ -22,7 +22,7 @@ function About() {
                 </svg>
               </a>
               <a aria-label="linkedin" href="https://www.linkedin.com/in/jiyoung-g-lee" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} inverse className="icon" /></a>
-              <a href={resume}>
+              <a href={resume} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFile} inverse className="icon" />
               </a>
               <a aria-label="email" href="mailto:jiyoung.g.lee118@gmail.com"><FontAwesomeIcon icon={faEnvelope} inverse className="icon" /></a>
