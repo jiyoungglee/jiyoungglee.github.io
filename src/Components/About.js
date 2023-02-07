@@ -13,7 +13,15 @@ function About() {
         <div className="about-content-container">
           <div className="about-content">
             <h2>Jiyoung Lee</h2>
-            <div className="about-me">Hi my name is Jiyoung Lee and I am a software developer with a passion for front end development. Feel free to explore my page and take a look at my projects.</div>
+            <div className="about-me">
+              Hi my name is Jiyoung Lee and I am a business analyst with a recently discovered
+              passion for software development. Throughout 4 years of analyzing business
+              processes, data, and products as a business analyst, I felt a hunger to take on
+              a more hands on approach to providing creative technical solutions. My curosity
+              led me down a path of continuous learning that has allowed me to experience
+              creating products from start to finish with my own abilities.
+              Feel free to explore my page and take a look at my projects.
+            </div>
             <a className="about-me-link" href="#aboutme">MORE</a>
             <div className="icon-strip">
               <a href="https://github.com/jiyoungglee" target="_blank" rel="noopener noreferrer">
