@@ -21,7 +21,7 @@ function PreviewMode() {
   return (
     <div>
       <PreviewPopup>
-        <Video />
+        <Video muted />
       </PreviewPopup>
       <div className="footer">
         <div className="preview-bar">
