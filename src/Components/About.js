@@ -1,9 +1,8 @@
 /* eslint-disable global-require */
 import '../Styles/About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import resume from '../Previews/JiyoungResume.pdf';
 
 function About() {
   return (
@@ -47,9 +46,6 @@ function About() {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} inverse className="icon" />
-              </a>
-              <a href={resume} target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faFile} inverse className="icon" />
               </a>
               <a aria-label="email" href="mailto:jiyoung.g.lee118@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} inverse className="icon" />
