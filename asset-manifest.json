@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9c3c480.css",
-    "main.js": "/static/js/main.b9f553f2.js",
+    "main.css": "/static/css/main.900cc3e1.css",
+    "main.js": "/static/js/main.e683110b.js",
     "static/media/portfolio-demo.mov": "/static/media/portfolio-demo.6d8e9a45a90bf19325dc.mov",
     "static/media/social-feed-demo.mov": "/static/media/social-feed-demo.f67b4c13c84bc456b11e.mov",
     "static/media/nvision-demo.mov": "/static/media/nvision-demo.46ee692ce23ccf177d32.mov",
     "static/media/shopping-list-demo.mov": "/static/media/shopping-list-demo.7b4f18d54356877f743e.mov",
     "static/media/Jiyoung.jpeg": "/static/media/Jiyoung.58d733f2a1fc826132ee.jpeg",
     "static/media/tech-talk.png": "/static/media/tech-talk.c9e89083ce812074cb01.png",
+    "static/media/Resume.pdf": "/static/media/Resume.e5263e2ea7f3fb297279.pdf",
     "static/media/nvision.svg": "/static/media/nvision.14ec55a49675b13b7ff4c4be814378ba.svg",
+    "static/media/ibm.svg": "/static/media/ibm.4319de081c3786690f790fc7554269f1.svg",
     "index.html": "/index.html",
-    "main.e9c3c480.css.map": "/static/css/main.e9c3c480.css.map",
-    "main.b9f553f2.js.map": "/static/js/main.b9f553f2.js.map"
+    "main.900cc3e1.css.map": "/static/css/main.900cc3e1.css.map",
+    "main.e683110b.js.map": "/static/js/main.e683110b.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9c3c480.css",
-    "static/js/main.b9f553f2.js"
+    "static/css/main.900cc3e1.css",
+    "static/js/main.e683110b.js"
   ]
 }
