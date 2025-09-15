@@ -17,15 +17,6 @@ function Education() {
           <div>Rutgers University, Rutgers Business School</div>
         </div>
       </div>
-      <div className="degree">
-        <div className="grad-icon">
-          <img className="capm-badge" alt="CAPM Badge" src="https://images.credly.com/size/340x340/images/ad9ad44b-54b8-4916-ba10-7b131da0b732/capm-600px.png" />
-        </div>
-        <div className="degree-details">
-          <div className="degree-name">Certified Associate in Project Management (CAPM)</div>
-          <div>Project Management Institute</div>
-        </div>
-      </div>
       <div className="coursework">
         <Carousel heading="Related Coursework">
           <CarouselItem type="round" description="CS Fundamentals">

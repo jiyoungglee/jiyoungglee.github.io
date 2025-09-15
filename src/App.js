@@ -7,6 +7,7 @@ import Skills from './Components/Skills';
 import PreviewMode from './Components/PreviewMode';
 import { PlayerContext } from './store/PlayerContext';
 import TalksandPubs from './Components/TalksAndPubs';
+import Experience from './Components/Experience';
 
 function App() {
   const { state } = useContext(PlayerContext);
@@ -27,6 +28,7 @@ function App() {
       <div className={state.index === null ? '' : 'page-padding'}>
         <About />
         <div className="content">
+          <Experience />
           <h2>Projects</h2>
           <ProjectList />
           <TalksandPubs />
@@ -34,15 +36,12 @@ function App() {
           <Skills />
           <div id="aboutme">
             <h2>About</h2>
-            <div className="about-content">
-              Hi my name is Jiyoung Lee and I am a passionate software developer
-              specializing in React, Node, JavaScript, and TypeScript.
-              Co-creator and developer @ nVision, an open source Next.js dev
-              tool that provides observability for server-side network activity.
-              Currently working @ Hotswaps to improve the mechanical keyboard
-              marketplace. Let’s talk! Recently gave a talk on Caching and
-              Optimization in NY. Eagerly embracing new technologies; my latest
-              venture includes experimenting with Solid.js.
+            <div>
+              Dropping clean code and smooth UIs since 2022. Specializes in React
+              and TypeScript, with tracks ranging from high-performance debugging
+              tools to secure credential management. Collaborates cross-functionally
+              like a good bandmate, and never misses a beat when it comes to accessibility
+              or testing.
             </div>
           </div>
         </div>

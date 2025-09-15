@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 import '../Styles/About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 function About() {
@@ -17,14 +17,10 @@ function About() {
           <div className="about-content">
             <h2>Jiyoung Lee</h2>
             <div className="about-me">
-              Hi my name is Jiyoung Lee and I am a passionate software developer
-              specializing in React, Node, JavaScript, and TypeScript.
-              Co-creator and developer @ nVision, an open source Next.js dev
-              tool that provides observability for server-side network activity.
-              Currently working @ Hotswaps to improve the mechanical keyboard
-              marketplace. Let’s talk! Recently gave a talk on Caching and
-              Optimization in NY. Eagerly embracing new technologies; my latest
-              venture includes experimenting with Solid.js.
+              <div>🎤 Genres: Front-End Engineering, Scalable Systems, Intuitive Interfaces</div>
+              <div>🎸 Instruments: React, TypeScript, Express, Selenium</div>
+              <div>🔥 Greatest Hits: DataStage Canvas (enterprise ETL remix), Marketplace (buy/sell edition), Observability Tool (live dev session)</div>
+              <div>🌎 On Tour: IBM, Hotswaps, nVision</div>
             </div>
             <a className="about-me-link" href="#aboutme">
               MORE
@@ -49,6 +45,14 @@ function About() {
               </a>
               <a aria-label="email" href="mailto:jiyoung.g.lee118@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} inverse className="icon" />
+              </a>
+              <a
+                aria-label="resume"
+                href={require('../Previews/Resume.pdf')}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFilePdf} inverse className="icon" />
               </a>
             </div>
           </div>
